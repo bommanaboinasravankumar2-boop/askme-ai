@@ -1,0 +1,79 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.app {
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #111827;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid #1f2937;
+}
+header h1 { font-size: 1.2rem; }
+header button {
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+#chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.msg {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.user { align-self: flex-end; background: #2563eb; color: #fff; }
+.bot { align-self: flex-start; background: #1f2937; }
+.error { align-self: flex-start; background: #7f1d1d; }
+.loading { padding: 0 16px 8px; color: #94a3b8; font-size: 0.9rem; }
+.hidden { display: none; }
+.input-bar {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #1f2937;
+}
+.input-bar input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+.input-bar button {
+  padding: 0 18px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.input-bar button:disabled { opacity: 0.5; cursor: not-allowed; }
